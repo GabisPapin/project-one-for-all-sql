@@ -311,7 +311,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe.only('8 - Exibe uma relação de álbuns produzidos pelo artista Walter Phoenix', () => {
+  describe('8 - Exibe uma relação de álbuns produzidos pelo artista Walter Phoenix', () => {
     it('Verifica o desafio 8', async () => {
       const challengeQuery = readFileSync('desafio8.sql', 'utf8');
 
@@ -326,7 +326,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe('9 - Exibe a quantidade de músicas que estão presentes atualmente no histórico de reprodução da pessoa usuária Bill', () => {
+  describe.only('9 - Exibe a quantidade de músicas que estão presentes atualmente no histórico de reprodução da pessoa usuária Bill', () => {
     it('Verifica o desafio 9', async () => {
       const challengeQuery = readFileSync('desafio9.sql', 'utf8');
 
