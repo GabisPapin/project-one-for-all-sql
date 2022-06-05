@@ -3,12 +3,12 @@ CREATE DATABASE SpotifyClone;
 
 CREATE TABLE SpotifyClone.planos(
 	plano VARCHAR(100) NOT NULL,
-    valor_plano INTEGER NOT NULL,
+    valor_plano DECIMAL(3, 2) NOT NULL,
     CONSTRAINT PRIMARY KEY(plano)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.planos(plano, valor_plano)
-VALUES('gratuito', 0),
+VALUES('gratuito', 0.00),
 	  ('familiar', 7.99),
       ('universitario', 5.99),
       ('pessoal', 6.99);
@@ -19,22 +19,21 @@ CREATE TABLE SpotifyClone.users(
     idade INTEGER NOT NULL,
     plano VARCHAR(20) NOT NULL,
     data_assinatura DATE NOT NULL,
-    valor_plano FLOAT NOT NULL,
     CONSTRAINT PRIMARY KEY(usuario_id),
     FOREIGN KEY(plano) REFERENCES planos(plano)
 ) engine = InnoDB;
 
-INSERT INTO SpotifyClone.users(usuario_id, nome, idade, plano, data_assinatura, valor_plano)
-VALUES(1, 'Thati', 23, 'gratuito', '2019-10-20', 0),
-	  (2, 'Cintia', 35, 'familiar', '2017-12-30', 7.99),
-      (3, 'Bill', 20, 'universitario', '2019-06-05', 5.99),
-      (4, 'Roger', 45, 'pessoal', '2020-05-13', 6.99),
-      (5, 'Norman', 58, 'pessoal', '2017-02-17', 6.99),
-      (6, 'Patrick', 33, 'familiar', '2017-01-06', 7.99),
-      (7, 'Vivian', 26, 'universitario', '2018-01-05', 5.99),
-      (8, 'Carol', 19, 'universitario', '2018-02-14', 5.99),
-      (9, 'Angelina', 42, 'familiar', '2018-04-29', 7.99),
-      (10, 'Paul', 46, 'familiar','2017-01-17', 7.99);
+INSERT INTO SpotifyClone.users(usuario_id, nome, idade, plano, data_assinatura)
+VALUES(1, 'Thati', 23, 'gratuito', '2019-10-20'),
+	  (2, 'Cintia', 35, 'familiar', '2017-12-30'),
+      (3, 'Bill', 20, 'universitario', '2019-06-05'),
+      (4, 'Roger', 45, 'pessoal', '2020-05-13'),
+      (5, 'Norman', 58, 'pessoal', '2017-02-17'),
+      (6, 'Patrick', 33, 'familiar', '2017-01-06'),
+      (7, 'Vivian', 26, 'universitario', '2018-01-05'),
+      (8, 'Carol', 19, 'universitario', '2018-02-14'),
+      (9, 'Angelina', 42, 'familiar', '2018-04-29'),
+      (10, 'Paul', 46, 'familiar','2017-01-17');
       
 CREATE TABLE SpotifyClone.artistas(
 	artista_id INTEGER NOT NULL,
