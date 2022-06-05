@@ -269,7 +269,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe.only('6 - Exibe o relatório de faturamento da empresa', () => {
+  describe('6 - Exibe o relatório de faturamento da empresa', () => {
     it('Verifica o desafio 6', async () => {
       const challengeQuery = readFileSync('desafio6.sql', 'utf8');
 
@@ -288,7 +288,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe('7 - Exibe uma relação de todos os álbuns produzidos por cada artista', () => {
+  describe.only('7 - Exibe uma relação de todos os álbuns produzidos por cada artista', () => {
     it('Verifica o desafio 7', async () => {
       const challengeQuery = readFileSync('desafio7.sql', 'utf8');
 
