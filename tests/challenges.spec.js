@@ -231,7 +231,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe.only('4 - Exibe a condicao do usuario se esta ativo ou inativo', () => {
+  describe('4 - Exibe a condicao do usuario se esta ativo ou inativo', () => {
     it('Verifica o desafio 4', async () => {
       const challengeQuery = readFileSync('desafio4.sql', 'utf8');
 
@@ -254,7 +254,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe('5 - Exibe top 2 hits mais tocados no momento', () => {
+  describe.only('5 - Exibe top 2 hits mais tocados no momento', () => {
     it('Verifica o desafio 5', async () => {
       const challengeQuery = readFileSync('desafio5.sql', 'utf8');
 
